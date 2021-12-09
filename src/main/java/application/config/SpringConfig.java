@@ -1,7 +1,6 @@
 package application.config;
 
 import org.apache.tomcat.dbcp.dbcp2.BasicDataSource;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.core.env.Environment;
@@ -37,7 +36,6 @@ public class SpringConfig implements WebMvcConfigurer {
 
     private final Environment env;
 
-    @Autowired
     public SpringConfig(ApplicationContext applicationContext, Environment env) {
         this.env = env;
         this.applicationContext = applicationContext;
